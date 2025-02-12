@@ -292,6 +292,10 @@ curl -X POST "http://localhost:8080/receipts/process" \
 }
 ```
 
+### Using Post man/Insomnia
+<img width="1094" alt="Screenshot 2025-02-12 at 2 10 33 PM" src="https://github.com/user-attachments/assets/ab51834d-71c7-4795-b049-8298facc0317" />
+
+
 ---
 
 ### **2️⃣ Get Points for a Receipt**  
@@ -312,6 +316,10 @@ curl -X GET "http://localhost:8080/receipts/7fb1377b-b223-49d9-a31a-5a02701dd310
   "points": 28
 }
 ```
+
+### Using Insomnia/Postman
+<img width="993" alt="Screenshot 2025-02-12 at 2 11 00 PM" src="https://github.com/user-attachments/assets/2d80aa08-faee-4a56-b5bb-108905efa031" />
+
 
 ---
 
