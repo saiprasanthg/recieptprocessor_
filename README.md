@@ -143,5 +143,19 @@ Breakdown:
   = 109 points
 ```
 
+
+##Project Structure 
+
+receipt_processor/
+│── app/
+│   │── __init__.py       # Flask app initialization
+│   │── routes.py         # API endpoints
+│   │── services.py       # Business logic
+│── main.py               # Entry point to run Flask app
+│── Dockerfile            # Docker setup
+│── requirements.txt      # Dependencies
+
+
+
 ---
 
