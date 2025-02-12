@@ -146,27 +146,7 @@ Breakdown:
 
 ### Project Structure
 
-<img width="492" alt="Screenshot 2025-02-12 at 1 51 29 PM" src="https://github.com/user-attachments/assets/b781ca23-cb36-4181-8068-2be549b0f99e" />
 
-
-Here’s your **complete, professional, and well-structured `README.md`** with additional improvements like badges, table of contents, and formatting refinements. 🚀  
-
----
-
-```md
-# 🧾 Receipt Processor API  
-![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
-![Flask](https://img.shields.io/badge/Flask-2.0%2B-green)
-![Docker](https://img.shields.io/badge/Docker-Supported-blue)
-![License](https://img.shields.io/badge/License-MIT-yellow)
-
-## 📌 Project Description  
-Receipt Processor API is a Flask-based web service that processes receipts and calculates points based on predefined rules.  
-It assigns a unique ID to each receipt and retrieves the points earned based on the receipt details.
-
----
-
-## 📖 Table of Contents  
 - [📂 Project Structure](#-project-structure)  
 - [⚡ Installation & Usage](#-installation--usage)  
 - [🐳 Running with Docker](#-running-with-docker)  
@@ -174,9 +154,6 @@ It assigns a unique ID to each receipt and retrieves the points earned based on 
 - [🔥 API Endpoints](#-api-endpoints)  
 - [🏆 Points Calculation Rules](#-rules-for-points-calculation)  
 - [🧪 Running Tests](#-running-tests)  
-- [🔄 Contribution Guidelines](#-contribution-guidelines)  
-- [📜 License](#-license)  
-- [✨ Author](#-author)  
 
 ---
 
