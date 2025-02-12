@@ -149,6 +149,222 @@ Breakdown:
 <img width="492" alt="Screenshot 2025-02-12 at 1 51 29 PM" src="https://github.com/user-attachments/assets/b781ca23-cb36-4181-8068-2be549b0f99e" />
 
 
+Here’s your **complete, professional, and well-structured `README.md`** with additional improvements like badges, table of contents, and formatting refinements. 🚀  
+
+---
+
+```md
+# 🧾 Receipt Processor API  
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
+![Flask](https://img.shields.io/badge/Flask-2.0%2B-green)
+![Docker](https://img.shields.io/badge/Docker-Supported-blue)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+## 📌 Project Description  
+Receipt Processor API is a Flask-based web service that processes receipts and calculates points based on predefined rules.  
+It assigns a unique ID to each receipt and retrieves the points earned based on the receipt details.
+
+---
+
+## 📖 Table of Contents  
+- [📂 Project Structure](#-project-structure)  
+- [⚡ Installation & Usage](#-installation--usage)  
+- [🐳 Running with Docker](#-running-with-docker)  
+- [📦 Dependencies & Prerequisites](#-dependencies--prerequisites)  
+- [🔥 API Endpoints](#-api-endpoints)  
+- [🏆 Points Calculation Rules](#-rules-for-points-calculation)  
+- [🧪 Running Tests](#-running-tests)  
+- [🔄 Contribution Guidelines](#-contribution-guidelines)  
+- [📜 License](#-license)  
+- [✨ Author](#-author)  
+
+---
+
+## 📂 Project Structure  
+
+```sh
+receipt_processor/
+│── app/
+│   │── __init__.py       # Flask app initialization
+│   │── routes.py         # API endpoints
+│   │── services.py       # Business logic
+│── main.py               # Entry point to run Flask app
+│── Dockerfile            # Docker setup
+│── requirements.txt      # Dependencies
+│── tests/                # Unit tests
+│── README.md             # Documentation
+```
+
+---
+
+## ⚡ Installation & Usage  
+
+### **1️⃣ Install Dependencies (For Local Development)**  
+```sh
+pip install -r requirements.txt
+```
+
+### **2️⃣ Running Locally**  
+```sh
+python main.py
+```
+The API will be available at:  
+```sh
+http://localhost:5000
+```
+
+---
+
+## 🐳 Running with Docker  
+
+### **1️⃣ Build the Docker Image**  
+```sh
+docker build -t receiptprocessor .
+```
+
+### **2️⃣ Run the Container**  
+```sh
+docker run --name receiptprocessor-container -d -p 8080:8080 receiptprocessor
+```
+
+### **3️⃣ Stop the Running Container**  
+```sh
+docker stop receiptprocessor-container
+```
+
+### **4️⃣ Remove the Container**  
+```sh
+docker rm receiptprocessor-container
+```
+
+---
+
+## 📦 Dependencies & Prerequisites  
+
+```sh
+Python 3.9+
+Flask
+Flask-CORS
+Pytest (for testing)
+Docker (optional for containerization)
+```
+
+To install dependencies manually:  
+```sh
+pip install flask flask-cors pytest
+```
+
+---
+
+## 🔥 API Endpoints  
+
+### **1️⃣ Process a Receipt**  
+```sh
+Path: /receipts/process
+Method: POST
+Payload: Receipt JSON
+Response: JSON containing an ID for the receipt.
+```
+
+#### **Example Request**  
+```sh
+curl -X POST "http://localhost:8080/receipts/process" \
+     -H "Content-Type: application/json" \
+     -d '{
+          "retailer": "Target",
+          "purchaseDate": "2022-01-01",
+          "purchaseTime": "13:01",
+          "items": [
+            { "shortDescription": "Mountain Dew 12PK", "price": "6.49" },
+            { "shortDescription": "Emils Cheese Pizza", "price": "12.25" },
+            { "shortDescription": "Knorr Creamy Chicken", "price": "1.26" },
+            { "shortDescription": "Doritos Nacho Cheese", "price": "3.35" },
+            { "shortDescription": "   Klarbrunn 12-PK 12 FL OZ  ", "price": "12.00" }
+          ],
+          "total": "35.35"
+      }'
+```
+
+#### **Example Response**  
+```json
+{
+  "id": "7fb1377b-b223-49d9-a31a-5a02701dd310"
+}
+```
+
+---
+
+### **2️⃣ Get Points for a Receipt**  
+```sh
+Path: /receipts/{id}/points
+Method: GET
+Response: A JSON object containing the number of points awarded.
+```
+
+#### **Example Request**  
+```sh
+curl -X GET "http://localhost:8080/receipts/7fb1377b-b223-49d9-a31a-5a02701dd310/points"
+```
+
+#### **Example Response**  
+```json
+{
+  "points": 28
+}
+```
+
+---
+
+## 🏆 Rules for Points Calculation  
+
+```sh
+1. One point for every alphanumeric character in the retailer name.
+2. 50 points if the total is a round dollar amount with no cents.
+3. 25 points if the total is a multiple of 0.25.
+4. 5 points for every two items on the receipt.
+5. If the trimmed length of the item description is a multiple of 3,
+   multiply the price by 0.2 and round up to the nearest integer.
+6. 6 points if the day in the purchase date is odd.
+7. 10 points if the time of purchase is after 2:00pm and before 4:00pm.
+```
+
+---
+
+## 🧪 Running Tests  
+
+### **1️⃣ Run Tests in a New Container**  
+```sh
+docker run --rm -it receiptprocessor pytest tests/
+```
+
+### **2️⃣ Run Tests Inside an Existing Container**  
+```sh
+docker exec -it receiptprocessor-container pytest tests/
+```
+
+### **3️⃣ Manually Enter the Container for Debugging**  
+```sh
+docker exec -it receiptprocessor-container /bin/sh
+pytest tests/
+exit
+```
+
+---
+
+
+## ✨ Author  
+
+```sh
+Sai Prasanth Guthula 🚀
+```
+
+---
+
+
+---
+
+
+
 
 
 ---
