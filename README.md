@@ -144,7 +144,7 @@ Breakdown:
 ```
 
 
-##Project Structure 
+### Project Structure
 
 <img width="492" alt="Screenshot 2025-02-12 at 1 51 29 PM" src="https://github.com/user-attachments/assets/b781ca23-cb36-4181-8068-2be549b0f99e" />
 
