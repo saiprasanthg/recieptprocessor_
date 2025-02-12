@@ -187,7 +187,7 @@ python main.py
 ```
 The API will be available at:  
 ```sh
-http://localhost:5000
+http://localhost:8080
 ```
 
 ---
