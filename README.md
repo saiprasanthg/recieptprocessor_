@@ -146,14 +146,8 @@ Breakdown:
 
 ##Project Structure 
 
-receipt_processor/
-│── app/
-│   │── __init__.py       # Flask app initialization
-│   │── routes.py         # API endpoints
-│   │── services.py       # Business logic
-│── main.py               # Entry point to run Flask app
-│── Dockerfile            # Docker setup
-│── requirements.txt      # Dependencies
+<img width="492" alt="Screenshot 2025-02-12 at 1 51 29 PM" src="https://github.com/user-attachments/assets/b781ca23-cb36-4181-8068-2be549b0f99e" />
+
 
 
 
